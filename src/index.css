@@ -1,13 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Roboto+Slab:wght@400;500;600&family=Roboto:wght@500&display=swap");
+
+.card {
+  @apply w-fit bg-gray-300 rounded-lg overflow-hidden drop-shadow-xl relative mb-6;
+}
+
+.badge {
+  @apply absolute top-0 bg-gray-200 p-2 rounded-full mt-2 ml-2;
+}
+
+.btn {
+  @apply py-2 px-3 text-yellow-300 font-roboto border-yellow-300 border-2 rounded-full text-lg tracking-wide cursor-pointer select-none;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(100, 0, 123);
+  background: radial-gradient(
+    circle,
+    rgba(100, 0, 123, 1) 0%,
+    rgba(62, 20, 86, 1) 100%
+  );
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

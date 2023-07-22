@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
+import TailwindSeries from "./components/TailwindSeries";
+import { motion } from "framer-motion";
+import Loader from "./components/Loader";
+
+const buttonVariants = {
+  hover: {
+    scale: 1.5,
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
+    transition: {
+      yoyo: Infinity,
+    },
+  },
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TailwindSeries />
+      <motion.div
+        variants={buttonVariants}
+        animate="visible"
+        whileHover="hover"
+        className="mx-auto mt-6 text-3xl font-body text-primary w-fit border-primary py-3 px-6 border-2 rounded-full"
+      >
+        <Link to={`/base`}>Go Order Pizza</Link>
+      </motion.div>
+      <Loader />
     </div>
   );
 }
